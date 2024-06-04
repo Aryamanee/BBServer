@@ -1,0 +1,444 @@
+ID,name,desc,UID,price
+0,Vintage Lamp,Antique brass lamp in great condition,0,50
+1,Bike,Almost new mountain bike,1,200
+2,Sofa,Comfortable three-seater sofa,2,300
+3,Coffee Table,Modern glass coffee table,3,75
+4,Laptop,High-performance gaming laptop,4,1200
+5,Smartphone,Latest model smartphone with all accessories,5,800
+6,Bookshelf,Wooden bookshelf with 5 shelves,6,100
+7,Dining Table,Large oak dining table,7,500
+8,Headphones,Noise-cancelling headphones,8,150
+9,Guitar,Acoustic guitar in excellent condition,9,250
+10,Microwave,Compact microwave oven,10,90
+11,Vacuum Cleaner,Powerful vacuum cleaner,11,200
+12,Camera,DSLR camera with lens,12,900
+13,Bed Frame,King size metal bed frame,13,300
+14,Office Chair,Ergonomic office chair,14,150
+15,Refrigerator,Double door refrigerator,15,1000
+16,Printer,All-in-one printer,16,150
+17,Lawn Mower,Electric lawn mower,17,250
+18,Blender,High-speed kitchen blender,18,120
+19,Tent,Two-person camping tent,19,80
+20,Bicycle Helmet,Safety certified bike helmet,20,60
+21,Electric Scooter,Foldable electric scooter,21,400
+22,Cookware Set,10-piece non-stick cookware set,22,100
+23,Gaming Console,Latest gaming console with controllers,23,500
+24,Desk,Spacious office desk,24,200
+25,Chair,Comfy living room chair,25,100
+26,Mirror,Large wall-mounted mirror,26,75
+27,Books,Collection of classic novels,27,40
+28,TV,55-inch 4K smart TV,28,800
+29,Watch,Stylish wristwatch,29,150
+30,Vacuum,Handheld vacuum cleaner,30,100
+31,Mattress,Memory foam queen mattress,31,300
+32,Tent,Four-person family tent,32,120
+33,BBQ Grill,Outdoor charcoal grill,33,200
+34,Laptop Bag,Durable laptop backpack,34,70
+35,Painting,Beautiful landscape painting,35,150
+36,Water Bottle,Insulated stainless steel water bottle,36,30
+37,Sunglasses,Polarized sunglasses,37,50
+38,Fan,Oscillating tower fan,38,80
+39,Rug,Soft area rug,39,150
+40,Headset,Wireless gaming headset,40,120
+41,Plant,Potted indoor plant,41,40
+42,Clock,Vintage wall clock,42,90
+43,Heater,Portable space heater,43,70
+44,Drone,High-tech drone with camera,44,500
+45,Watch,Digital sports watch,45,100
+46,Purse,Designer handbag,46,300
+47,Sneakers,Comfortable running shoes,47,120
+48,Curtains,Set of blackout curtains,48,50
+49,Blender,Kitchen blender with multiple settings,49,100
+50,Lawn Chair,Foldable lawn chair,50,60
+51,Painting,Abstract art painting,51,150
+52,Desk Lamp,LED desk lamp,52,40
+53,Guitar,Electric guitar with amp,53,400
+54,Vacuum,Robot vacuum cleaner,54,300
+55,Bookshelf,Metal and wood bookshelf,55,150
+56,Coffee Maker,Single-serve coffee maker,56,120
+57,Grill,Gas BBQ grill,57,350
+58,Jacket,Warm winter jacket,58,200
+59,Fan,Ceiling fan with remote,59,150
+60,Microwave,Countertop microwave oven,60,120
+61,Helmet,Motorcycle helmet,61,200
+62,Mouse,Wireless computer mouse,62,50
+63,Books,Set of science fiction novels,63,60
+64,Lamp,Bedside table lamp,64,40
+65,Chair,Modern accent chair,65,150
+66,Curtains,Elegant living room curtains,66,70
+67,Blender,High-power blender for smoothies,67,150
+68,Plant,Large indoor ficus plant,68,50
+69,Clock,Digital alarm clock,69,30
+70,Watch,Classic leather strap watch,70,200
+71,Sofa,Compact loveseat sofa,71,400
+72,Desk,Adjustable standing desk,72,300
+73,Bicycle,Hybrid commuter bicycle,73,500
+74,Tent,Lightweight backpacking tent,74,150
+75,Shoes,Leather dress shoes,75,120
+76,Camera,Instant film camera,76,100
+77,Speaker,Bluetooth portable speaker,77,80
+78,Headphones,Over-ear Bluetooth headphones,78,150
+79,Bicycle,Kids' mountain bike,79,150
+80,Fridge,Mini fridge,80,100
+81,Laptop,Ultra-thin business laptop,81,1100
+82,Bed,Bunk bed with storage,82,600
+83,Chair,Reclining armchair,83,300
+84,Desk,Corner office desk,84,250
+85,Fan,Desk fan with USB,85,40
+86,Grill,Electric indoor grill,86,150
+87,Watch,Smartwatch with fitness tracker,87,250
+88,Camera,Action camera for sports,88,300
+89,Helmet,Ski helmet with goggles,89,120
+90,Backpack,Waterproof hiking backpack,90,100
+91,Coffee Table,Rustic wood coffee table,91,200
+92,Sofa,Sectional sofa with chaise,92,1200
+93,Desk,Glass computer desk,93,180
+94,Lamp,Floor lamp with shelves,94,120
+95,Plant,Cactus in ceramic pot,95,40
+96,Heater,Infrared space heater,96,150
+97,Books,Complete works of Shakespeare,97,80
+98,Shoes,Running shoes for women,98,110
+99,Bicycle,Folding bicycle,99,450
+100,Laptop Stand,Adjustable laptop stand for desk,100,70
+101,Camera Lens,Wide-angle camera lens,101,300
+102,Couch,Leather couch with recliners,102,1000
+103,Dining Set,6-piece dining set with table and chairs,103,800
+104,Electric Kettle,Fast boiling electric kettle,104,40
+105,Headlamp,Rechargeable LED headlamp,105,50
+106,Speaker,Home theater speaker system,106,500
+107,Blender,Multi-function kitchen blender,107,200
+108,Mouse Pad,Large gaming mouse pad,108,30
+109,Air Fryer,Digital air fryer,109,150
+110,Stroller,Baby stroller with car seat,110,300
+111,Backpack,Large capacity travel backpack,111,90
+112,Desk Chair,Executive leather desk chair,112,250
+113,Bike Pump,High-pressure bike pump,113,40
+114,Toaster,4-slice toaster with browning control,114,60
+115,Watch,Waterproof digital wristwatch,115,100
+116,Chair,Rocking chair for nursery,116,120
+117,Monitor,27-inch 4K computer monitor,117,500
+118,Cabinet,Wooden storage cabinet,118,200
+119,Humidifier,Ultrasonic cool mist humidifier,119,80
+120,Grill,Portable propane grill,120,250
+121,Microscope,Kids educational microscope set,121,70
+122,Curtains,Thermal insulated curtains,122,60
+123,Mattress,Full-size memory foam mattress,123,250
+124,Mouse,Ergonomic vertical mouse,124,50
+125,Treadmill,Foldable home treadmill,125,600
+126,Blender,Personal smoothie blender,126,90
+127,Keyboard,Mechanical gaming keyboard,127,120
+128,Helmet,Bike helmet with LED light,128,80
+129,Books,Mystery novel collection,129,60
+130,Guitar,Beginner acoustic guitar kit,130,180
+131,Router,Wi-Fi 6 mesh router,131,300
+132,Smart Light,Smart LED light bulbs,132,80
+133,Vacuum,Lightweight stick vacuum,133,200
+134,Coffee Grinder,Burr coffee grinder,134,90
+135,Water Filter,Under-sink water filter system,135,200
+136,Desk Organizer,Desk organizer with drawers,136,40
+137,Laptop,Convertible 2-in-1 laptop,137,900
+138,Bike,City commuter bike,138,400
+139,Watch,Fitness tracker smartwatch,139,150
+140,Lamp,Industrial floor lamp,140,100
+141,Speaker,Smart home speaker,141,120
+142,Drill,Cordless power drill,142,200
+143,Tool Set,Complete household tool set,143,150
+144,Printer,Wireless color printer,144,200
+145,Monitor,Curved gaming monitor,145,600
+146,Chair,Patio lounge chair,146,120
+147,Bookcase,5-shelf bookcase,147,200
+148,Sunglasses,UV protection sunglasses,148,70
+149,Fan,Portable misting fan,149,100
+150,Tablet,Android tablet with pen,150,350
+151,Blender,Commercial-grade blender,151,400
+152,Shoes,Hiking boots,152,150
+153,Keyboard,Wireless keyboard and mouse set,153,80
+154,Desk,Standing desk converter,154,200
+155,Vacuum,Car vacuum cleaner,155,60
+156,Water Dispenser,Hot and cold water dispenser,156,200
+157,Bicycle,Electric mountain bike,157,1500
+158,Phone,Unlocked smartphone,158,700
+159,Sofa,Leather sectional sofa,159,2000
+160,Headphones,Bluetooth sports headphones,160,130
+161,Watch,Men's stainless steel watch,161,250
+162,Microwave,Over-the-range microwave,162,300
+163,Chair,Office chair with lumbar support,163,180
+164,Monitor,Ultrawide monitor,164,450
+165,Camera,Mirrorless camera with lens,165,1200
+166,Blender,Handheld immersion blender,166,60
+167,Laptop,Chromebook,167,350
+168,Headphones,In-ear wired headphones,168,50
+169,Guitar,Electric bass guitar,169,600
+170,TV,75-inch 8K smart TV,170,4000
+171,Shoes,Basketball sneakers,171,200
+172,Books,Hardcover fantasy series,172,120
+173,Chair,Folding beach chair,173,60
+174,Desk,Glass top office desk,174,220
+175,Blender,Blender with food processor attachment,175,180
+176,Coffee Maker,Programmable drip coffee maker,176,90
+177,Books,Children's book set,177,50
+178,Watch,Ladies' rose gold watch,178,300
+179,Curtains,Sheer curtains for bedroom,179,40
+180,Laptop,High-end workstation laptop,180,2500
+181,Desk,Rolling computer desk,181,150
+182,Tablet,Kids' tablet with parental controls,182,100
+183,Headphones,Noise-isolating earbuds,183,80
+184,Smartphone,Refurbished smartphone,184,400
+185,Bookshelf,Corner bookshelf,185,140
+186,Lamp,Desk lamp with USB port,186,45
+187,Fan,Window fan with remote control,187,100
+188,Shoes,Slip-on casual shoes,188,60
+189,Backpack,Convertible diaper bag backpack,189,90
+190,Guitar,Travel acoustic guitar,190,250
+191,Camera,Point and shoot digital camera,191,300
+192,Chair,Swivel chair with armrests,192,180
+193,Curtains,Velvet curtains for living room,193,80
+194,Blender,Portable blender for shakes,194,50
+195,Microwave,Large capacity microwave,195,150
+196,Lawn Mower,Self-propelled lawn mower,196,400
+197,Helmet,Full-face motorcycle helmet,197,250
+198,Headphones,Studio monitoring headphones,198,200
+199,Smartwatch,Smartwatch with GPS,199,400
+200,Bike,Mountain bike with suspension,200,600
+201,Desk,Adjustable height desk,201,250
+202,Lamp,Adjustable reading lamp,202,60
+203,Blender,Blender with glass jar,203,120
+204,Curtains,Light filtering curtains,204,50
+205,Watch,Automatic mechanical watch,205,600
+206,Laptop,Touchscreen laptop,206,1000
+207,Sofa,Convertible sofa bed,207,800
+208,Tablet,Tablet with detachable keyboard,208,400
+209,Books,Non-fiction bestseller set,209,70
+210,Chair,Ergonomic gaming chair,210,300
+211,Fan,Rechargeable handheld fan,211,30
+212,Guitar,Classical guitar with nylon strings,212,400
+213,Microwave,Compact microwave for dorm,213,70
+214,Headphones,Open-back audiophile headphones,214,350
+215,Desk,Desk with built-in shelves,215,220
+216,Coffee Maker,Espresso machine,216,350
+217,Bookshelf,Adjustable bookshelf,217,100
+218,Lamp,Smart lamp with voice control,218,90
+219,Fan,High velocity floor fan,219,120
+220,Blender,Smoothie blender with travel cup,220,70
+221,Watch,Luxury Swiss watch,221,5000
+222,Laptop,Gaming laptop with RTX GPU,222,2000
+223,Chair,Outdoor Adirondack chair,223,120
+224,Books,Graphic novel collection,224,90
+225,Curtains,Room darkening curtains,225,60
+226,Headphones,Wireless earbuds with charging case,226,150
+227,Monitor,1080p gaming monitor,227,300
+228,Smartphone,Flagship smartphone,228,1200
+229,Guitar,Vintage electric guitar,229,1500
+230,Camera,Professional DSLR camera,230,3000
+231,Vacuum,Pet hair vacuum cleaner,231,250
+232,Sofa,Reclining sofa set,232,1800
+233,Desk,Executive desk with drawers,233,500
+234,Books,Complete encyclopedia set,234,200
+235,Watch,Sporty digital watch,235,100
+236,Blender,Hand mixer and blender set,236,60
+237,Microwave,Stainless steel microwave,237,180
+238,Chair,Mesh office chair,238,130
+239,Fan,Wall-mounted fan,239,80
+240,Helmet,Skateboarding helmet,240,50
+241,Tablet,High-resolution tablet,241,600
+242,Shoes,Trail running shoes,242,130
+243,Headphones,Over-ear headphones with mic,243,90
+244,Bookshelf,White wood bookshelf,244,110
+245,Laptop,Business ultrabook,245,1500
+246,Lamp,Color changing lamp,246,70
+247,Guitar,Electric guitar starter pack,247,300
+248,Curtains,Linen curtains for kitchen,248,40
+249,Blender,High-speed professional blender,249,250
+250,Bike,Carbon fiber road bike,250,2000
+251,Watch,Vintage wristwatch,251,300
+252,Camera,4K action camera,252,200
+253,Desk,Children's study desk,253,90
+254,Fan,Tower fan with air purifier,254,200
+255,Laptop,Detachable 2-in-1 laptop,255,800
+256,Tablet,Large screen tablet,256,500
+257,Headphones,Wireless gaming headphones,257,180
+258,Smartphone,Mid-range smartphone,258,500
+259,Chair,Foldable camping chair,259,60
+260,Sofa,Fabric sectional sofa,260,1000
+261,Bookshelf,Adjustable wall-mounted bookshelf,261,200
+262,Blender,Single-serve blender,262,40
+263,Books,Mystery and thriller book set,263,60
+264,Lamp,Antique table lamp,264,150
+265,Microwave,Over-the-counter microwave,265,200
+266,Watch,Digital sports watch,266,80
+267,Desk,Adjustable laptop desk,267,70
+268,Helmet,Snowboarding helmet,268,100
+269,Fan,Smart ceiling fan,269,250
+270,Shoes,Formal leather shoes,270,200
+271,Camera,Compact mirrorless camera,271,700
+272,Curtains,Kids' blackout curtains,272,60
+273,Laptop,Student laptop,273,400
+274,Guitar,Acoustic-electric guitar,274,500
+275,Headphones,True wireless earbuds,275,200
+276,Sofa,Modern chaise lounge,276,900
+277,Blender,Blender and grinder combo,277,80
+278,Bookshelf,Glass door bookshelf,278,300
+279,Watch,Men's luxury watch,279,2000
+280,Microwave,Convection microwave oven,280,300
+281,Chair,Bean bag chair,281,70
+282,Fan,Personal desk fan,282,20
+283,Bike,Folding electric bike,283,1000
+284,Tablet,Tablet with stylus,284,350
+285,Lamp,LED desk lamp,285,40
+286,Camera,Wireless security camera,286,200
+287,Smartphone,Budget smartphone,287,250
+288,Books,Science fiction trilogy,288,50
+289,Helmet,Rock climbing helmet,289,120
+290,Desk,Writing desk with drawers,290,180
+291,Laptop,Gaming laptop with RGB keyboard,291,1700
+292,Watch,Classic analog watch,292,120
+293,Fan,Retro table fan,293,60
+294,Guitar,Bass guitar with amp,294,800
+295,Blender,Portable smoothie blender,295,50
+296,Bookshelf,Corner ladder bookshelf,296,130
+297,Headphones,Wireless over-ear headphones,297,160
+298,Smartphone,High-end smartphone,298,1100
+299,Chair,Outdoor rocking chair,299,150
+300,Microwave,Inverter microwave oven,300,250
+301,Tablet,Kids' learning tablet,301,100
+302,Desk,Glass-top computer desk,302,220
+303,Blender,Immersion blender with attachments,303,70
+304,Curtains,Patterned window curtains,304,50
+305,Lamp,Touch-sensitive bedside lamp,305,60
+306,Books,Historical fiction series,306,80
+307,Watch,Digital watch with heart rate monitor,307,180
+308,Helmet,Multi-sport helmet,308,90
+309,Fan,Pedestal fan with remote,309,100
+310,Camera,Film camera with lens,310,300
+311,Sofa,Microfiber recliner sofa,311,700
+312,Blender,Juicer and blender combo,312,150
+313,Chair,Ergonomic kneeling chair,313,250
+314,Smartphone,Rugged smartphone,314,600
+315,Books,Popular science book set,315,90
+316,Desk,Compact writing desk,316,100
+317,Microwave,Smart microwave,317,400
+318,Headphones,Bluetooth neckband headphones,318,100
+319,Watch,Chronograph watch,319,300
+320,Tablet,Convertible tablet PC,320,800
+321,Lamp,Modern floor lamp,321,100
+322,Helmet,Certified climbing helmet,322,140
+323,Fan,Bladeless fan with remote,323,250
+324,Bookshelf,Heavy-duty metal bookshelf,324,180
+325,Camera,DSLR camera with multiple lenses,325,1500
+326,Sofa,Mid-century modern sofa,326,1200
+327,Laptop,Lightweight business laptop,327,1100
+328,Desk,Height adjustable desk,328,300
+329,Blender,Commercial-grade blender,329,350
+330,Smartphone,5G smartphone,330,900
+331,Chair,Ergonomic office chair,331,220
+332,Books,Cookbook collection,332,70
+333,Microwave,Stainless steel microwave,333,200
+334,Watch,Men's digital watch,334,100
+335,Helmet,Motorcycle helmet with Bluetooth,335,300
+336,Fan,Energy-efficient ceiling fan,336,200
+337,Tablet,Tablet with high-resolution screen,337,700
+338,Headphones,Noise-cancelling headphones,338,250
+339,Blender,High-performance blender,339,200
+340,Lamp,Reading lamp with adjustable arm,340,80
+341,Bookshelf,Adjustable modular bookshelf,341,140
+342,Camera,4K video camera,342,1000
+343,Sofa,Convertible futon sofa,343,400
+344,Desk,Modern writing desk,344,150
+345,Watch,Automatic diver's watch,345,600
+346,Smartphone,Compact smartphone,346,500
+347,Chair,Outdoor lounge chair,347,180
+348,Fan,Smart fan with app control,348,150
+349,Books,Classic literature collection,349,100
+350,Microwave,Countertop convection microwave,350,300
+351,Tablet,Tablet with detachable keyboard,351,500
+352,Laptop,Gaming laptop with high refresh rate,352,1800
+353,Blender,Portable blender with USB,353,60
+354,Helmet,Mountain biking helmet,354,150
+355,Bookshelf,Wood and metal bookshelf,355,130
+356,Headphones,High-fidelity headphones,356,350
+357,Watch,Women's luxury watch,357,1500
+358,Fan,Portable air conditioner,358,350
+359,Desk,Standing desk with electric lift,359,400
+360,Smartphone,Flagship smartphone,360,1200
+361,Camera,Professional video camera,361,2500
+362,Lamp,Desk lamp with wireless charger,362,90
+363,Sofa,Sectional sofa with storage,363,1500
+364,Tablet,Drawing tablet with stylus,364,400
+365,Chair,Mesh ergonomic chair,365,200
+366,Microwave,Compact countertop microwave,366,150
+367,Blender,Single-serve blender,367,50
+368,Books,Thriller novel collection,368,80
+369,Watch,Fitness tracking smartwatch,369,250
+370,Fan,Oscillating tower fan,370,100
+371,Helmet,Full-face BMX helmet,371,180
+372,Smartphone,Entry-level smartphone,372,300
+373,Bookshelf,Glass bookshelf,373,250
+374,Desk,Corner desk with storage,374,300
+375,Lamp,Antique brass floor lamp,375,150
+376,Chair,Foldable director's chair,376,70
+377,Camera,Instant print camera,377,100
+378,Blender,Professional kitchen blender,378,300
+379,Tablet,Tablet with expandable storage,379,250
+380,Laptop,Touchscreen ultrabook,380,1500
+381,Watch,Smartwatch with ECG,381,400
+382,Books,Young adult fantasy series,382,90
+383,Microwave,Convection microwave oven,383,250
+384,Fan,Ceiling fan with light,384,200
+385,Headphones,Bluetooth headphones with mic,385,90
+386,Helmet,Lightweight cycling helmet,386,130
+387,Desk,Adjustable drafting table,387,220
+388,Sofa,Faux leather loveseat,388,800
+389,Smartphone,High-capacity battery smartphone,389,800
+390,Blender,Blender with food processor,390,200
+391,Bookshelf,Five-tier bookshelf,391,150
+392,Tablet,Tablet with cellular connectivity,392,500
+393,Watch,Analog watch with leather strap,393,150
+394,Fan,Outdoor misting fan,394,180
+395,Chair,Accent chair with ottoman,395,300
+396,Camera,Waterproof action camera,396,150
+397,Lamp,Industrial desk lamp,397,70
+398,Microwave,Large countertop microwave,398,180
+399,Headphones,True wireless earbuds,399,150
+400,Bike,Hybrid city bike,400,600
+401,Desk,Large executive desk,401,500
+402,Laptop,Chromebook,402,300
+403,Smartphone,Unlocked smartphone,403,700
+404,Bookshelf,Adjustable shelving unit,404,200
+405,Blender,Blender with glass pitcher,405,100
+406,Watch,Classic wristwatch,406,250
+407,Fan,Smart fan with voice control,407,200
+408,Tablet,Kids' educational tablet,408,120
+409,Camera,Mirrorless camera kit,409,1200
+410,Chair,Reclining lounge chair,410,400
+411,Lamp,LED reading lamp,411,50
+412,Books,Science fiction novel set,412,70
+413,Microwave,Compact microwave for office,413,100
+414,Headphones,In-ear noise-cancelling headphones,414,100
+415,Helmet,Ski helmet with visor,415,150
+416,Desk,Height adjustable standing desk,416,300
+417,Sofa,Velvet tufted sofa,417,1300
+418,Blender,Multi-speed kitchen blender,418,90
+419,Fan,Quiet operation fan,419,80
+420,Watch,Digital sports watch,420,100
+421,Tablet,Tablet with keyboard case,421,350
+422,Smartphone,Water-resistant smartphone,422,800
+423,Bookshelf,Wooden bookcase,423,180
+424,Camera,Compact digital camera,424,250
+425,Laptop,Business laptop with SSD,425,1200
+426,Chair,Leather recliner chair,426,500
+427,Books,Romance novel collection,427,60
+428,Microwave,Over-the-range microwave,428,350
+429,Headphones,Studio headphones,429,200
+430,Blender,Hand blender with attachments,430,70
+431,Lamp,Smart bedside lamp,431,90
+432,Fan,Industrial floor fan,432,150
+433,Helmet,Convertible motorcycle helmet,433,250
+434,Desk,Modern computer desk,434,180
+435,Watch,Smartwatch with GPS,435,300
+436,Tablet,Tablet with detachable keyboard,436,450
+437,Books,Children's storybook set,437,50
+438,Sofa,Reclining leather sofa,438,2000
+439,Smartphone,5G enabled smartphone,439,1000
+440,Chair,Massage office chair,440,400
+441,Camera,DSLR camera with accessories,441,1000
+442,Microwave,Inverter microwave,442,200
