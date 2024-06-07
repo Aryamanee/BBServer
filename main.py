@@ -52,7 +52,6 @@ class Server:
             return responses.Response(status_code=404)
         else:
             return {
-                "account": True,
                 "UID": int(account["UID"]),
                 "name": account["name"],
                 "username": account["username"],
