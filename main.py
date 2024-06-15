@@ -28,8 +28,20 @@ class Server:
             "/set_listing_photo", self.set_listing_photo, methods=["PUT"]
         )
         self.router.add_api_route("/login", self.login, methods=["GET"])
+        self.router.add_api_route("/new_listing", self.new_listing, methods=["GET"])
+        self.router.add_api_route("/get_listing", self.get_listing, methods=["GET"])
+        self.router.add_api_route("/get_listings", self.get_listings, methods=["GET"])
 
     def new_account(self, name: str, username: str, password: str):
+        if (
+            name == ""
+            or name.isspace()
+            or username == ""
+            or username.isspace()
+            or password == ""
+            or password.isspace()
+        ):
+            return {"successful": False}
         try:
             count = self.accounts["username"].value_counts()[username]
         except KeyError:
@@ -107,6 +119,50 @@ class Server:
                 0
             ]
             return {"username": True, "password": pw == password}
+
+    def new_listing(self, name: str, desc: str, uid: int, price: int):
+        if name == "" or name.isspace() or desc == "" or desc.isspace():
+            return {"ID": None}
+        id = len(self.listings.index)
+        self.listings.loc[id] = [
+            len(self.listings.index),
+            name,
+            desc,
+            uid,
+            price,
+        ]
+        print(os.getcwd())
+        self.listings.to_csv("listings.csv", index=False)
+        return {"ID": id}
+
+    def get_listing(self, id: int):
+        try:
+            listing = dict(self.listings.iloc[id])
+        except IndexError:
+            return responses.Response(status_code=404)
+        else:
+            return {
+                "ID": int(listing["ID"]),
+                "name": listing["name"],
+                "desc": listing["desc"],
+                "UID": int(listing["UID"]),
+                "price": int(listing["price"]),
+            }
+
+    def get_listings(self, uid: int):
+        listings = {}
+        matches = self.listings[self.listings["UID"] == uid]
+        n = 0
+        for index, row in matches.iterrows():
+            listings[n] = {
+                "ID": int(row["ID"]),
+                "name": row["name"],
+                "desc": row["desc"],
+                "UID": int(row["UID"]),
+                "price": int(row["price"]),
+            }
+            n += 1
+        return listings
 
 
 app = FastAPI()
