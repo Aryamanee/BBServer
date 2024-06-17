@@ -1,14 +1,21 @@
 import pandas as pd
-import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import linear_kernel
 from fastapi import FastAPI, APIRouter, responses, UploadFile
 import os
+import random
 
 
 class Server:
 
     def __init__(self):
-        self.listings = pd.read_csv("listings.csv")
-        self.accounts = pd.read_csv("accounts.csv")
+        self.remove_counter = 0
+        self.listings = pd.read_pickle("listings.pkl")
+        self.accounts = pd.read_pickle("accounts.pkl")
+        self.tfidf_vectorizer = TfidfVectorizer(stop_words="english")
+        self.listings["desc"] = self.listings["desc"].fillna("")
+        self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(self.listings["desc"])
+        self.cosine_sim = linear_kernel(self.tfidf_matrix, self.tfidf_matrix)
         self.router = APIRouter()
         self.router.add_api_route(
             "/new_account",
@@ -31,6 +38,17 @@ class Server:
         self.router.add_api_route("/new_listing", self.new_listing, methods=["GET"])
         self.router.add_api_route("/get_listing", self.get_listing, methods=["GET"])
         self.router.add_api_route("/get_listings", self.get_listings, methods=["GET"])
+        self.router.add_api_route(
+            "/get_next_listing", self.get_next_listing, methods=["GET"]
+        )
+        self.router.add_api_route(
+            "/set_view_duration", self.set_view_duration, methods=["POST"]
+        )
+        self.router.add_api_route("/add_to_basket", self.add_to_basket, methods=["GET"])
+        self.router.add_api_route(
+            "/remove_from_basket", self.remove_from_basket, methods=["GET"]
+        )
+        self.router.add_api_route("/get_basket", self.get_basket, methods=["GET"])
 
     def new_account(self, name: str, username: str, password: str):
         if (
@@ -51,7 +69,7 @@ class Server:
                 username,
                 password,
             ]
-            self.accounts.to_csv("accounts.csv", index=False)
+            self.accounts.to_pickle("accounts.pkl")
             return {"successful": True}
 
         else:
@@ -93,7 +111,7 @@ class Server:
         try:
             self.accounts.iloc[uid]
         except IndexError:
-            return responses.Response(status_code=422)
+            return responses.Response(status_code=400)
         else:
             file = open("pfp/" + str(uid) + ".png", "wb")
             file.write(pfp.file.read())
@@ -104,7 +122,7 @@ class Server:
         try:
             self.accounts.iloc[id]
         except IndexError:
-            return responses.Response(status_code=422)
+            return responses.Response(status_code=400)
         else:
             file = open("listing_photos/" + str(id) + ".png", "wb")
             file.write(listing_photo.file.read())
@@ -132,7 +150,9 @@ class Server:
             price,
         ]
         print(os.getcwd())
-        self.listings.to_csv("listings.csv", index=False)
+        self.listings.to_pickle("listings.pkl")
+        self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(self.listings["desc"])
+        self.cosine_sim = linear_kernel(self.tfidf_matrix, self.tfidf_matrix)
         return {"ID": id}
 
     def get_listing(self, id: int):
@@ -163,6 +183,92 @@ class Server:
             }
             n += 1
         return listings
+
+    def get_next_listing(self, uid: int):
+        self.remove_counter += 1
+        try:
+            history = self.accounts[self.accounts["UID"] == uid].iloc[0]["history"]
+        except IndexError:
+            return responses.Response(status_code=400)
+        if len(history) > 10:
+            randomornot = random.randint(1, 5)
+            if randomornot == 5:
+                ID = random.randint(0, len(self.listings.index) - 1)
+                return self.get_listing(ID)
+            history = list(map(list, history.items()))
+            history.sort(key=lambda x: x[1], reverse=True)
+            selection_index = random.randint(0, 9)
+            id = history[selection_index][0]
+            sim_nums = enumerate(self.cosine_sim[id])
+            sim_nums = list(sim_nums)[1::]
+            sim_nums.sort(key=lambda x: x[1], reverse=True)
+            sim_index = random.randint(0, 9)
+            if self.remove_counter >= 3:
+                self.remove_counter = 0
+                del self.accounts[self.accounts["UID"] == uid].iloc[0]["history"][
+                    history[-1][0]
+                ]
+                self.accounts.to_pickle("accounts.pkl")
+
+            return self.get_listing(sim_nums[sim_index][0])
+        else:
+            ID = random.randint(0, len(self.listings.index) - 1)
+            return self.get_listing(ID)
+
+    def set_view_duration(self, uid: int, id: int, duration: float):
+        try:
+            account = self.accounts[self.accounts["UID"] == uid].iloc[0]
+        except IndexError:
+            return responses.Response(status_code=400)
+
+        try:
+            if account["history"][id] < duration:
+                account["history"][id] = duration
+        except KeyError:
+            account["history"][id] = duration
+
+        self.accounts.to_pickle("accounts.pkl")
+
+        return responses.Response(status_code=200)
+
+    def add_to_basket(self, uid: int, id: int):
+        try:
+            account = self.accounts[self.accounts["UID"] == uid].iloc[0]
+        except IndexError:
+            return responses.Response(status_code=400)
+
+        if id not in account["basket"]:
+            account["basket"].append(id)
+            self.accounts.to_pickle("accounts.pkl")
+            return responses.Response(status_code=200)
+        else:
+            return responses.Response(status_code=400)
+
+    def remove_from_basket(self, uid: int, id: int):
+        try:
+            account = self.accounts[self.accounts["UID"] == uid].iloc[0]
+        except IndexError:
+            return responses.Response(status_code=400)
+
+        if id in account["basket"]:
+            account["basket"].remove(id)
+            self.accounts.to_pickle("accounts.pkl")
+            return responses.Response(status_code=200)
+        else:
+            return responses.Response(status_code=400)
+
+    def get_basket(self, uid: int):
+        try:
+            account = self.accounts[self.accounts["UID"] == uid].iloc[0]
+        except IndexError:
+            return responses.Response(status_code=400)
+
+        basket = account["basket"]
+        dict_basket = {}
+        for i in range(len(basket)):
+            dict_basket[i] = basket[i]
+
+        return dict_basket
 
 
 app = FastAPI()
