@@ -68,6 +68,8 @@ class Server:
                 name,
                 username,
                 password,
+                {},
+                [],
             ]
             self.accounts.to_pickle("accounts.pkl")
             return {"successful": True}
@@ -266,7 +268,7 @@ class Server:
         basket = account["basket"]
         dict_basket = {}
         for i in range(len(basket)):
-            dict_basket[i] = basket[i]
+            dict_basket[i] = self.get_listing(basket[i])
 
         return dict_basket
 
