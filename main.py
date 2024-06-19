@@ -12,6 +12,7 @@ class Server:
         self.remove_counter = 0
         self.listings = pd.read_pickle("listings.pkl")
         self.accounts = pd.read_pickle("accounts.pkl")
+        self.chats = pd.read_pickle("chats.pkl")
         self.tfidf_vectorizer = TfidfVectorizer(stop_words="english")
         self.listings["desc"] = self.listings["desc"].fillna("")
         self.tfidf_matrix = self.tfidf_vectorizer.fit_transform(self.listings["desc"])
@@ -49,6 +50,9 @@ class Server:
             "/remove_from_basket", self.remove_from_basket, methods=["GET"]
         )
         self.router.add_api_route("/get_basket", self.get_basket, methods=["GET"])
+        self.router.add_api_route("/get_chat", self.get_chat, methods=["GET"])
+        self.router.add_api_route("/create_chat", self.create_chat, methods=["GET"])
+        self.router.add_api_route("/write_message", self.write_message, methods=["GET"])
 
     def new_account(self, name: str, username: str, password: str):
         if (
@@ -222,15 +226,8 @@ class Server:
             account = self.accounts[self.accounts["UID"] == uid].iloc[0]
         except IndexError:
             return responses.Response(status_code=400)
-
-        try:
-            if account["history"][id] < duration:
-                account["history"][id] = duration
-        except KeyError:
-            account["history"][id] = duration
-
+        account["history"][id] = duration
         self.accounts.to_pickle("accounts.pkl")
-
         return responses.Response(status_code=200)
 
     def add_to_basket(self, uid: int, id: int):
@@ -271,6 +268,38 @@ class Server:
             dict_basket[i] = self.get_listing(basket[i])
 
         return dict_basket
+
+    def get_chat(self, P1: int, P2: int):
+        matches = self.chats[
+            self.chats["name"] == str(min(P1, P2)) + "&" + str(max(P1, P2))
+        ]
+        if len(matches) == 0:
+            return {"matches": None}
+        else:
+            return {"matches": matches[0]["msgs"]}
+
+    def create_chat(self, P1: int, P2: int):
+        if self.get_chat(P1, P2)["matches"] == None:
+            return responses.Response(status_code=400)
+        new_row = [
+            str(min(P1, P2)) + "&" + str(max(P1, P2)),
+            min(P1, P2),
+            max(P1, P2),
+            list(),
+        ]
+        self.chats.iloc[self.chats.index] = new_row
+        self.chats.to_pickle("chats.pkl")
+        return responses.Response(status_code=200)
+
+    def write_message(self, uid: int, to: int, content: str):
+        matches = self.chats[
+            self.chats["name"] == str(min(uid, to)) + "&" + str(max(uid, to))
+        ]
+        if len(matches) == 0:
+            return responses.Response(status_code=400)
+        else:
+            matches[0]["msgs"].append((content, uid > to))
+            return responses.Response(status_code=200)
 
 
 app = FastAPI()
