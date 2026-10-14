@@ -1,5 +1,5 @@
 # BBServer
-Server for the bargain bee app
+Server for the [bargain bee app](https://github.com/Aryamanee/BargainBee)
 The Database for accounts and listings was generated using chatgpt
 
 I used this resource to help with recomendations: https://www.youtube.com/watch?v=ijtxuF_5kEU
